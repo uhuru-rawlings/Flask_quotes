@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+
+{% block title %}
+  <title> {{ title }}</title>
+{% endblock %}
+
+{% block navbar %}
+<div class="navbars">
+    <div class="welcome">
+         <h3>Welcome: <span>{{ name }}</span> </h3>
+    </div>
+    <div class="navlist">
+        <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/interview">Interview</a></li>
+            <li><a href="/promotion">Promotion</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/mortivation">Mortivation</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="posts">
+    <h3 style="text-align: center;">Category: {{ getpost.category }}</h3>
+       <div class="card">
+          <div class="flex">
+              <div class="author">{{ getpost.author }}</div>
+              <div class="author">{{ getpost.category }}</div>
+          </div>
+           <div class="content">{{ getpost.posts }}</div>
+           <div class="feedback">
+            <div class="liked">
+               <div class="likes">{{ getlikes }}</div>
+               <a href="/likes/{{ getpost.id}}"><div class="like">Like</div></a>
+            </div>
+            <div class="comments">
+                <form action="/comments/{{ getpost.id }}" method="post">
+                   <textarea name="postcomment" id="postcomment" cols="30" rows="10" placeholder="Tyep comment here" required></textarea>
+                   <input type="submit" value="Send">
+               </form>
+            </div>
+        </div>
+        <div class="commentsect">
+			<h4>Comments</h4>
+            {% if results %}
+			{% for comment in results %}
+				<div class="commentcard">
+					<div class="authors">{{ comment.comment }}</div>
+					<div class="commentbody"></div>
+				</div>
+		    {% endfor %}
+			{% else %}
+			<div class="commentcard">
+				<div class="authors">There are no comments for this post</div>
+			</div>
+			{%  endif %}
+         </div>
+       </div>
+</div>
+{% endblock %}

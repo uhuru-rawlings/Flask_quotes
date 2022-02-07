@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{% endblock %}
+
+{% block navbar %}
+<div class="navbars">
+    <div class="welcome">
+         <h3>Welcome: <span>{{ name }}</span> </h3>
+    </div>
+    <div class="navlist">
+        <ul>
+            <li><a id="active" href="/dashboard">Home</a></li>
+            <li><a href="/interview">Interview</a></li>
+            <li><a href="/promotion">Promotion</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/mortivation">Mortivation</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+  <div class="pitchingpage">
+        <div class="pitchingbg">
+            <div class="contents">
+                <h1>In life, you only have 60 seconds to impress someone. 1 minute can make or break you. 
+                    How do we make sure that you use your 1 minute to actually say something meaningful?</h1>
+                    <p>Are you in for the challange?</p>
+                    <a href="#pitchform">
+                        <button>Add Pitch</button>
+                    </a>
+            </div>
+        </div>
+  </div>
+  <div class="pitchform" id="pitchform">
+      <h1 style="text-align: center;">Add Pitch</h1>
+      <div class="pitchs">
+        <p>Post you pitch with the category and let people rate you pitching</p>
+        <form action="/dashboard" method="post">
+            <div class="errormess"> {{ message }} </div>
+           <select name="category" id="category">
+               <option value="">--select category --</option>
+               <option value="interview">interview</option>
+               <option value="promotion">promotion</option>
+               <option value="mortivation">mortivation</option>
+               <option value="products">products</option>
+           </select>
+           <br>
+           <textarea name="pitchmessage" id="pitchmessage" cols="30" rows="10" placeholder="You pitch goes here"></textarea>
+           <br>
+           <input type="submit" value="Post Pitch">
+        </form>
+      </div>
+  </div>
+{% endblock %}
