@@ -70,7 +70,7 @@ def load_user(user_id):
 
 @app.route('/')
 def index():
-    title = "Sign-In"
+    title = "Sign-In page"
     return render_template('index.html', title = title)
 
 @app.route('/login', methods = ['POST','GET'])
