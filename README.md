@@ -2,6 +2,8 @@
 ## AUTHOR: UHURU OTIENO RAWLINGS
 ## DESCRIPTION:
 This is a flask application that allows the users to signup , login and post quotes and allow others to like and comment on the posts.
+## PROJECT FETURES
+
 ## SET UP INSTRUCTION
 This project uses python so you need to install python.
 If you are using ubuntu it has python 3.6 installed, you can upgrade to another version or just used the same version
