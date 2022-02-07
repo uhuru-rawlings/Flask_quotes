@@ -17,7 +17,8 @@ mail= Mail(app)
 UPLOAD_FOLDER = 'static/uploads/'
 db = SQLAlchemy(app)
 # dbconfig
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:Access@localhost/quotes'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+# SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 app.config['SECRET_KEY'] = 'testsecretekey'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
