@@ -21,7 +21,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 # dbconfig
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:Access@localhost/quotes'
 # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 app.config['SECRET_KEY'] = 'testsecretekey'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
