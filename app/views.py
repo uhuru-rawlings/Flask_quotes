@@ -11,13 +11,17 @@ from flask import flash
 import psycopg2
 import psycopg2.extras
 from flask_mail import Mail, Message
+from flask_migrate import Migrate
 
 mail= Mail(app)
 
 UPLOAD_FOLDER = 'static/uploads/'
 db = SQLAlchemy(app)
+
+migrate = Migrate(app, db)
 # dbconfig
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+
 # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 app.config['SECRET_KEY'] = 'testsecretekey'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
