@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="logins">
+      <div class="header">
+          <span><h2>Sign-Up</h2></span>
+          <span>Welcome to piching app, signup to proceed</span>
+      </div>
+      <form action="/signup" method="post">
+        <input type="text" name="usernames" id="username" placeholder="Enter username" required>
+        <input type="email" name="useremails" id="useremail" placeholder="Enter useremail" required>
+        <input type="password" name="passwords" id="password" placeholder="Enter password" required>
+        <input type="password" name="confirpassword" id="confirpassword" placeholder="Confirm password" required>
+        <div class="links"><a href="/">have account?</a></div>
+        <input type="submit" value="Sign-Up" id="signups">
+      </form>
+  </div>
+{% endblock %}

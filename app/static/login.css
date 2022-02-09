@@ -1,0 +1,36 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logins{
+    width: 28%;
+    margin: auto;
+    margin-top: 10%;
+}
+#useremail,#password, #confirpassword, #username{
+    outline: none;
+    border: 1px solid;
+    padding-left: 20px;
+    font-size: 16px;
+}
+#useremail,#password,#signups,#username, #confirpassword{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+#signups{
+   font-size: 18px;
+   font-weight: bold;
+}
+.header{
+    text-align: center;
+}
+.links{
+    margin-top: 10px;
+}
+.links a{
+    text-decoration: none;
+}
+.flashed{
+    color: red;
+    text-align: center;
+}
