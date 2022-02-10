@@ -16,10 +16,10 @@ manager.add_command('db',MigrateCommand)
 
 @manager.shell
 def make_shell_context():
-    return dict(app = app,db = db,Registration = Registration,Postlikes= Postlikes,
-                   Posts = Posts,
-                   Comment = Comment,
-                   Userprofile = Userprofile
+    return dict(app = app,db = db,registration = registration,postlikes= postlikes,
+                   Posts = posts,
+                   Comment = comment,
+                   Userprofile = userprofile
                )
 
 
