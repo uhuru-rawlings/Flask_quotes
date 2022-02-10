@@ -10,9 +10,9 @@
         <div class="navlist">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a id="active" href="/interview">Interview</a></li>
+                <li><a href="/interview">Interview</a></li>
                 <li><a href="/promotion">Promotion</a></li>
-                <li><a href="/products">Products</a></li>
+                <li><a id="active" href="/products">Products</a></li>
                 <li><a href="/motivation">Mortivation</a></li>
                 <li><a href="/profile">Profile</a></li>
             </ul>
@@ -22,16 +22,16 @@
 
 {% block body %}
 <div class="posts">
-    {% for interview in interviews %}
+    {% for products in products %}
        <div class="card">
           <div class="flex">
-              <div class="author">{{ interview.author}}</div>
-              <div class="author">{{ interview.category}}</div>
+              <div class="author">{{ products.author}}</div>
+              <div class="author">{{ products.category}}</div>
           </div>
-           <div class="content">{{ interview.posts }}</div>
+           <div class="content">{{ products.posts }}</div>
            <div class="feedback">
                <div class="comments">
-                   <form action="/comments/{{ interview.id }}" method="post">
+                   <form action="/comments/{{ products.id }}" method="post">
                       <textarea name="postcomment" id="postcomment" cols="30" rows="10" placeholder="Tyep comment here" required></textarea>
                       <input type="submit" value="Send">
                   </form>
@@ -39,7 +39,7 @@
               
            </div>
            <div class="commentsect">
-              <a href="/showcomments/{{ interview.id }}">See More...</a>
+              <a href="/showcomments/{{ products.id }}">See More...</a>
          </div>
        </div>
     {% endfor %}

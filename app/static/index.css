@@ -6,6 +6,9 @@ body{
     justify-content: space-between;
     border-bottom: 1px solid gainsboro;
 }
+p ul li{
+    list-style: none;
+}
 .navlist ul li{
     list-style: none;
     display: inline;
@@ -118,4 +121,20 @@ body{
 }
 #active{
     color: rgba(99, 1, 18, 0.986);
+}
+.image img{
+    border-radius: 50%;
+}
+.userprofiles{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+.fororfour{
+    font-size: 40px;
+    color: rgba(99, 1, 18, 0.986);
+    margin: auto;
+    width: 70%;
+    margin-top: 10%;
+    text-align: center;
 }

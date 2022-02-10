@@ -1,25 +1,11 @@
-{% extends 'base.html' %}
-
-{% block body %}
-  <div class="logins">
-      <div class="header">
-          <span><h2>Sign-In</h2></span>
-          <span>Welcome back, please sign-in to proceed</span>
-      </div>
-      <form action="/" method="post">
-          <div class="flashed">
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-              {% for message in messages %}
-                {{ message }}
-              {% endfor %}
-            {% endif %}
-          {% endwith %}
-          </div>
-        <input type="email" name="useremail" id="useremail" placeholder="Enter useremail" required>
-        <input type="password" name="password" id="password" placeholder="Enter password" required>
-        <div class="links"><a href="/signup">Dont have account?</a></div>
-        <input type="submit" value="Sign-In" id="signups">
-      </form>
-  </div>
-{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    
+</body>
+</html>

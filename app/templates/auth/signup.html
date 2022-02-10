@@ -1,0 +1,32 @@
+{%  extends 'auth/bases.html' %}
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <form action="/auth/signup" method="post">
+        <h3 style="text-align: center;">Sign-Up</h3>
+        <p style="text-align: center;">Welcome, create account to continue</p>
+        <div class="results" style="text-align: center; color: red;">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+       <input type="email" name="useremails" autocomplete="off" id="useremails" placeholder="Enter useremail" required>
+       <input type="text" name="username" autocomplete="off" id="username" placeholder="Enter username" required>
+       <input type="password" name="password" autocomplete="off" id="password" placeholder="Enter password" required>
+       <input type="password" name="confirmuserpassword" autocomplete="off" id="confirmuserpassword" placeholder="Confirm password" required>
+       <div class="linkls">
+        <a href="/auth/login">Have account?</a>
+       </div>
+       <input type="submit" value="Sign-Up">
+    </form>
+</div>
+{% endblock %}

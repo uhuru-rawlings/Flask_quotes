@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbars">
+        <div class="welcome">
+            <h3>Welcome: <span>{{ name }}</span> </h3>
+        </div>
+        <div class="navlist">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/interview">Interview</a></li>
+                <li><a href="/promotion">Promotion</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/motivation">Mortivation</a></li>
+                <li><a id="active" href="/profile">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="fororfour">Sorry The requested page dont exist</div>
+</body>
+</html>
