@@ -26,6 +26,6 @@ to install pyhton in ubuntu terminal
 <br>
 In windows you will need to download python lastest version from python official website and install
 ## RUNNING THE PROJECT
-The project can be run on the browser by typing <code>python3 run.py</code> where run.py is responsible for running the project.
+The project can be run on the browser by typing <code>./start</code> where run.py is responsible for running the project.
 ## HOW THE PROJECT LOOKS LIKE
 ![Screenshot.png](Screenshot.png)
